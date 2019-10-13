@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-
+const double CENTIMETERS_PER_INCH = 2.54;
+const int INCHES_PER_FOOT = 12;
 
 void sum(int a, int b) {
     cout << a + b << endl;
@@ -71,5 +72,16 @@ int main() {
     next_char('b');
 
     days(1023);
+
+    cout << "----Converting----" << endl;
+    int feet, inches;
+    double centimeter;
+    cout << "Enter two integers, one for feet and one for inches: \n";
+    cin >> feet >> inches;
+    cout << endl;
+    int totalInches = INCHES_PER_FOOT * feet + inches;
+    cout << "The total number of inches = " << totalInches << endl;
+    centimeter = CENTIMETERS_PER_INCH * totalInches;
+    cout << "The number of centimeters = " << centimeter << endl;
     return 0;
 }
