@@ -32,6 +32,22 @@ void even_or_odd(int num) {
     cout << ((num % 2 == 0) ? "Even" : "Odd") << endl;
 }
 
+void next_char(char c) {
+    cout << "Enter a character: \n";
+    cin >> c;
+    c++;
+    cout << "Next character is " << c << endl;
+}
+
+void days(int num_days) {
+    int y, m, d;
+    y = num_days/365;
+    num_days%=365;
+    m = num_days/30;
+    d = num_days%30;
+    cout << "Years: " << y << "\nMonths: " << m << "\nDays: " << d << endl;
+}
+
 int main() {
     sum(2,4);
     f_to_c(102);
@@ -51,5 +67,9 @@ int main() {
 
     even_or_odd(10);
     even_or_odd(11);
+
+    next_char('b');
+
+    days(1023);
     return 0;
 }
